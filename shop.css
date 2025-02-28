@@ -1,0 +1,109 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif; /* Более современный шрифт */
+    background-color: #f8f9fa; /* Светло-серый фон */
+    color: #333; /* Темно-серый цвет текста */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: #343a40; /* Темно-серый цвет header */
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-description {
+    font-size: 1.2rem;
+}
+
+.site-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для фильтра категорий */
+.category-filter {
+    width: 250px;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-filter h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.category-filter label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.category-filter input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    accent-color: #007bff; /* Яркий синий для checkbox */
+}
+
+/* Стили для сетки товаров */
+.products-section {
+    flex: 1;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Увеличен минимальный размер карточки */
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: none; /* Убрана граница */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff; /* Белый фон */
+    color: #333; /* Темно-серый текст */
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    transition: transform 0.2s ease-in-out; /* Анимация при наведении */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.product-card h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #007bff; /* Синий цвет для заголовка */
+}
+
+.product-card p {
+    margin-bottom: 0.8rem;
+}
+
+/* Стили для footer */
+.site-footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

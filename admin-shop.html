@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель администратора</title>
+    <link href="admin.css" rel="stylesheet">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>Панель администратора</h1>
+    </header>
+
+    <main class="admin-content">
+        <!-- Секция добавления товара -->
+        <section class="section add-product-section">
+            <h2>Добавить новый товар</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="name">Название:</label>
+                    <input type="text" id="name" placeholder="Введите название товара" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Цена:</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="price" placeholder="0.00" required>
+                        <span class="currency-icon">₽</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание:</label>
+                    <textarea id="description" placeholder="Подробное описание товара" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="categoryIds">ID категорий (через запятую):</label>
+                    <input type="text" id="categoryIds" placeholder="1,2,3 (минимум одна категория)" required>
+                    <small class="form-text">Укажите ID категорий через запятую. Пример: 1,2</small>
+                </div>
+                <button type="submit" class="primary-button">Добавить товар</button>
+            </form>
+        </section>
+
+        <!-- Секция списка товаров -->
+        <section class="section product-list-section">
+            <h2>Список товаров</h2>
+            <div class="toolbar">
+                <button onclick="loadProducts()" class="secondary-button">Обновить список</button>
+            </div>
+            <div id="productList" class="product-list">
+                <!-- Здесь будут отображаться товары -->
+            </div>
+        </section>
+
+        <!-- Секция списка категорий -->
+        <section class="section category-list-section">
+            <h2>Список категорий</h2>
+            <div class="toolbar">
+                <button onclick="loadCategories()" class="secondary-button">Обновить список</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="admin-footer">
+        <p>© 2024 Панель администратора интернет-магазина</p>
+    </footer>
+
+    <script src="load-admin.js"></script>
+</body>
+</html>
